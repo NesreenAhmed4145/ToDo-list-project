@@ -1,0 +1,110 @@
+/* :root { */
+/* لون الخلفية الخارجية (بيج فاتح) */
+/* --bg-body: */
+
+/* لون خلفية الحاوية الرئيسية (أخضر داكن) */
+/* --bg-card: #172b21; */
+
+/* لون خلفية حقل الإدخال (أخضر أغمق) */
+/* --bg-input: #0d1a12; */
+
+/* لون النصوص الرئيسية والزر (كريمي) */
+/* --text-main: #f3ebdb; */
+
+/* لون الحدود ونص COMPLETED (برتقالي/ذهبي) */
+/* --color-warning: #d38328; */
+
+/* لون نص EDIT (أخضر مائل للسماوي) */
+/* --color-success: #00a878; */
+
+/* لون نص DELETE (أحمر) */
+/* --color-danger: #d1253c; */
+/* } */
+
+.bg-body {
+  background-color: #f3ebdb !important;
+}
+
+.bg-card {
+  background-color: #172b21;
+}
+
+.bg-input {
+  background-color: #0d1a12;
+}
+
+.text-main {
+  color: #f3ebdb;
+}
+
+.color-success {
+  color: #00a878;
+  font-weight: bold;
+}
+.color-danger {
+  color: #d1253c;
+  font-weight: bold;
+}
+.color-warning {
+  color: #d38328;
+  font-weight: bold;
+  
+}
+
+.task-input::placeholder {
+  color: #b6ab97;
+}
+.task-input {
+  border: 1px solid #f3ebdb;
+  border-radius: 10px !important ;
+}
+#addBtn {
+  background-color: #172b21;
+  padding: 8px 12px;
+  
+  border-radius: 10px !important ;
+  color: #f3ebdb;
+  font-weight: bold;
+    border: 1px solid #d5b187;
+
+}
+#addBtn:hover{
+  opacity: .7;
+}
+.task {
+  display: flex;
+  flex-direction: column; /* في الموبايل: النص فوق والأزرار تحت */
+  border: 1px solid #d38328;
+  border-radius: 8px !important;
+  color: #f3ebdb;
+  padding: 12px;
+  margin-top: 15px;
+  gap: 12px; /* تقليل الفجوة المناسبة للموبايل */
+}
+
+.task h5 {
+  padding-top: 0;
+  padding-left: 5px;
+  margin-bottom: 0;
+  overflow-wrap: anywhere; /* يضمن التفاف الكلمات الطويلة بدون تكسير الحروف رأسياً */
+  flex: 1;
+  text-align: left;
+}
+
+.task div {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px; /* مسافة متناسقة بين الأزرار */
+  flex-wrap: wrap; /* يمنع خروج الأزرار عن حدود الكارت */
+}
+
+@media (min-width: 576px) {
+  .task {
+    flex-direction: row; /* يرجعوا جنب بعض في الشاشات الأكبر */
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+}
